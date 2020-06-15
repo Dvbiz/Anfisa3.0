@@ -1,34 +1,51 @@
 <!DOCTYPE html>
 <html lang="ru">
+{% load static %}
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="author" content="Denis Vasiliev" />
   <title>Анфиса</title>
-  <link rel="stylesheet" href="../static/styles/about.css">
+  <link rel="stylesheet" href="{% static "styles/about.css" %}">
+  <link rel="stylesheet" href="{% static "styles/vendor/normalize.css" %}">
 </head>
 
-<body>
+<body class="body">
+  <section class="header">
+    <div class="header__title">
+      <h1 class='header__title_text'>Здравствуйте! Я - Анфиса!
+        <span class='text__span'>ver 3.0</span></h1>
+      <hr>
+    </div>
+  </section>
+  </section>
   <section class='content'>
-    <h1>Здравствуйте! Я - Анфиса!</h1>
-    <p>Я могу:</p>
-    <ul>
-      <li>Показать список ваших друзей</li>
-      <li>Сказать, в каком городе живёт ваш друг</li>
-      <li>Рассказать о погоде в том городе, где живёт ваш друг</li>
-      <li>Сообщить местное время вашего друга</li>
-    </ul>
-    <p>Все вопросы должны начинаться с имени, например: «<strong>Коля</strong>, ты где?» или «<strong>Анфиса</strong>,
-      сколько у меня друзей?»</p>
-    <p>Пока что я понимаю не все вопросы, но готова ответить на такие:</p>
-    <ul>
-      <li>Анфиса, сколько у меня друзей?</li>
-      <li>Анфиса, кто все мои друзья?</li>
-      <li>Анфиса, где все мои друзья?</li>
-      <li>Коля, ты где?</li>
-      <li>Алексей, который час?</li>
-      <li>Петя, как погода?</li>
-    </ul>
-    <a href="/">Задавайте вопросы!</a>
+    <div class='description'>
+      <h2 class='description__title'>Я могу:</h2>
+      <p class='description__text'>&#10004; Показать список ваших друзей</p>
+      <p class='description__text description__text_scnd'>&#10004; Сказать, в каком городе живёт ваш друг</p>
+      <p class='description__text description__text_thrd'>&#10004; Рассказать о погоде в том городе, где живёт ваш друг
+      </p>
+      <p class='description__text description__text_fth'>&#10004; Сообщить местное время вашего друга</p>
+
+      <h3 class='description__subtitle'>Все вопросы должны начинаться с имени, <br>например: «<strong
+          class="text__strong">Коля</strong>
+        , ты где?» или <br>«<strong class="text__strong">Анфиса</strong>,
+        сколько у меня друзей?»</h3>
+      <h4 class='description__subtitle_scnd'>Пока что я понимаю не все вопросы, но готова ответить <br>на такие:</h4>
+      <ul class='description__list'>
+        <li>Анфиса, сколько у меня друзей?</li>
+        <li>Анфиса, кто все мои друзья?</li>
+        <li>Анфиса, где все мои друзья?</li>
+        <li>Коля, ты где?</li>
+        <li>Алексей, который час?</li>
+        <li>Петя, как погода?</li>
+      </ul>
+      <div class="question"><a class='question__link' href="/">Задавайте вопросы!</a></div>
+      
+    </div>
   </section>
 </body>
 

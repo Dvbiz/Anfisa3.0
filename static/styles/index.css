@@ -1,0 +1,69 @@
+.body{
+  background-color: #2A2C2F;
+  max-width: 1440px;
+  margin: auto 30px;
+  color: azure;
+}
+.header{
+  margin: 30px auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.header__title{
+  margin: auto;
+}
+.header__title_text{
+  font-size: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  
+}
+.askMe__link{
+  color: wheat;
+  font-size: 34px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.askMe__link:hover{
+  transition: 1s;
+  color: black;
+}
+.askMe{
+  max-width: 100%;
+  margin-top: 0;
+  padding-top: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.askMe__title{
+  color: wheat;
+  font-size: 30px;
+}
+.askMe__input{
+  background-color: wheat;
+  border: none;
+  height: 24px;
+  border-radius: 25px;
+  width:250px;
+  color: #2A2C2F;
+}
+.askMe__button{
+  background-color: azure;
+  border: none;
+  height: 24px;
+  color:#2A2C2F;
+  cursor: pointer;
+  border-radius: 25px;
+  font-weight: bold;
+  opacity: 0.6;
+}
+.askMe__button:hover{
+  background-color:wheat;
+  opacity: 1;
+  transition: 1s;
+}
+.askMe__subtitle{
+  color: azure;
+  font-size: 30px;
+}

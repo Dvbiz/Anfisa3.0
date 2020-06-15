@@ -1,19 +1,42 @@
 <!DOCTYPE html>
 <html lang="ru">
+{% load static %}
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="author" content="Denis Vasiliev" />
   <title>Анфиса</title>
-  <link rel="stylesheet" href="https://code.s3.yandex.net/backend-developer/Anfisa/style.css">
+  <link rel="stylesheet" href="{% static "styles/index.css" %}">
+  <link rel="stylesheet" href="{% static "styles/vendor/normalize.css" %}">
+  <!-- <link rel="stylesheet" href="../static/styles/index.css"> -->
+  <!-- <link rel="stylesheet" href='../static/styles/vendor/normalize.css'> -->
 </head>
 
-<body>
-  <form action="{{ where }}" method="post">
-    Введите запрос:<br><br>
-    <input type="text" name="query">
-    <input type="submit" value="Спросить"><br><br>
-  </form>
-  {{ response | safe }}
+<body class="body">
+  <header class='header'>
+    <div class="header__title">
+      <h1 class='header__title_text'>Здравствуйте! Я - Анфиса!
+        <span class='text__span'>ver 3.0</span></h1>
+      <hr>
+    </div>
+  </header>
+  <main>
+    <section class='askMe'>
+      <h3 class="askMe__title">Введите запрос:</h3>
+      <form action="{{ where }}" method="post">
+        <input class='askMe__input' type="text" name="query">
+        <input class='askMe__button' type="submit" value="Спросить"><br><br>
+      </form>
+      {{ response | safe }}
+      <p class="askMe__subtitle">Если у вас возникли трудности,<br>рекомендую ознакомиться
+        со списком всех моих возможностей <a class='askMe__link' href="/about">тут.</a>
+        
+      </p>
+    </section>
+  </main>
+
 </body>
 
 </html>
