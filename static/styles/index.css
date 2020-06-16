@@ -17,8 +17,10 @@
 .header__title_text{
   font-size: 50px;
   font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-  
+  text-align: center; 
+}
+.text__span{
+  color: wheat;
 }
 .askMe__link{
   color: wheat;
@@ -41,7 +43,7 @@
   font-size: 30px;
 }
 .askMe__input{
-  background-color: wheat;
+  background-color: azure;
   border: none;
   height: 24px;
   border-radius: 25px;
@@ -66,4 +68,33 @@
 .askMe__subtitle{
   color: azure;
   font-size: 30px;
+}
+.askMe__subtitle_scnd{
+  text-align: right;
+  color: wheat;
+  margin-top: 50px;
+}
+.askMe__request{
+  color: wheat;
+  font-size: 30px;
+}
+.askMe__link_scnd{
+  color:azure
+}
+@media (max-width: 420px){
+  .header__title_text{
+    font-size: 35px;
+  }
+  .askMe__link{
+    font-size: 24px;
+  }
+  .askMe__title{
+    font-size: 20px;
+  }
+  .askMe__subtitle{
+    font-size: 20px;
+  }
+  .askMe__request{
+    font-size: 20px;
+  }
 }

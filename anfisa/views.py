@@ -17,7 +17,7 @@ def index(request):
         answer = anfisa.process_query(query)
 
         # полученный из anfisa.py ответ оборачиваем в HTML-теги, будет нарядно
-        html = f'<mark>{answer}</mark>'
+        html = f'<p class = "askMe__request">{answer}</p>'
 
     # подготовьте словарь context, чтобы вывести информацию в шаблон
     context = {
@@ -27,3 +27,15 @@ def index(request):
 
     # добавьте словарь context третьим аргументом
     return render(request, 'templates/index.html', context)
+def new_friend(request):
+    html = ''
+    if request.method == 'POST':
+        name = request.POST['name']
+        city = request.POST['city']
+        answer = anfisa.new_friend(name, city)
+        html = f'<p>{answer}</p><p>Теперь ты можешь <a class = "question__link" href="/">задавать вопросы!</a></p>'
+    context = {
+        'response': html, 
+        'where': request.path
+    }
+    return render(request, 'templates/new-friend.html', context)

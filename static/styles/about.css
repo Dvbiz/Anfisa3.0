@@ -59,6 +59,9 @@
 .description__text_fth{
   margin-left: calc(100% - 70%);
 }
+.description__text_fivth{
+  margin-left: calc(100% - 85%);
+}
 .description__subtitle{
   font-size: 35px;
   color: wheat;

@@ -120,3 +120,12 @@ def process_query(query):
         return process_anfisa(tokens[1])
     else:
         return process_friend(name, tokens[1])
+
+# Новые возможности
+
+def new_friend(name, city):
+    if name in DATABASE:
+        return f'Имя: {name}, уже есть в моей базе, попробуйте другое'
+    elif name not in DATABASE:
+        DATABASE[name] = city
+        return f'Приятно познакомиться {name}!'
