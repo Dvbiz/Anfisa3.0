@@ -124,8 +124,10 @@ def process_query(query):
 # Новые возможности
 
 def new_friend(name, city):
-    if name in DATABASE:
-        return f'Имя: {name}, уже есть в моей базе, попробуйте другое'
+    if name == '' or city == '':
+        return f'Извините, но вы забыли заполнить одно из полей.'
+    elif name in DATABASE:
+        return f'Имя: {name}, уже есть в моей базе, попробуйте другое.'
     elif name not in DATABASE:
         DATABASE[name] = city
-        return f'Приятно познакомиться {name}!'
+        return f'Ваш друг с именем: {name}, записан в базу данных.'

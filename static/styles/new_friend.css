@@ -1,0 +1,149 @@
+.body {
+  background-color: #2A2C2F;
+  max-width: 1980px;
+  margin: auto 30px;
+  color: azure;
+}
+
+.header {
+  margin: 30px auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header__title {
+  margin: auto;
+}
+
+.header__title_text {
+  font-size: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.text__span {
+  color: wheat;
+}
+
+.main {
+  margin: auto;
+}
+
+.content {
+  margin: auto;
+  border: solid 1px wheat;
+  border-radius: 25px;
+  height: 265px;
+  width: 600px;
+  box-shadow: 0 0 20px rgba(245, 255, 255, 1);
+  background-color: wheat;
+}
+
+.forms {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  justify-content: space-between;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.content__input {
+  border: none;
+  border-bottom: solid 1px #2A2C2F;
+  margin-bottom: 15px;
+  min-height: 30px;
+  background-color: wheat;
+  color: #2A2C2F;
+  font-size: 30px;
+}
+
+.content__button {
+  border-radius: 25px;
+  border: none;
+  width: 200px;
+  height: 30px;
+  margin: auto;
+  margin-top: 40px;
+  background-color: #2A2C2F;
+  font-size: 25px;
+  font-weight: bold;
+  color: azure;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.content__button:hover {
+  opacity: 1;
+  transition: 1s;
+}
+.question__link{
+  color: azure;
+  font-size: 35px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.question__link:hover{
+  transition: 1s;
+  color:black
+}
+.content__answer{
+  color: wheat;
+  font-size: 35px;
+  margin-top: 70px;
+}
+@media (max-width: 650px){
+  .content{
+    width: 520px;
+  }
+  .forms{
+    width:400px
+  }
+}
+@media (max-width: 560px){
+  .content{
+    width: 340px;
+    height: 170px;
+  }
+  .forms{
+    width: 280px;
+    margin-top: 10px;
+  }
+  .content__button{
+    margin-top: 12px;
+  }
+  .content__input{
+    font-size: 20px;
+  }
+}
+@media (max-width: 400px){
+  .body{
+    margin: auto 15px;
+  }
+  .content{
+    width: 280px;
+    height: 140px;
+  }
+  .forms{
+    width: 240px;
+    margin-top: 10px;
+  }
+  .content__button{
+    margin-top: -4px;
+    font-size: 20px;
+  }
+  .content__input{
+    font-size: 17px;
+  }
+  .header__title_text{
+    font-size: 40px;
+  }
+  .content__answer{
+    font-size: 25px;
+  }
+  .question__link{
+    font-size: 25px;
+  }
+}

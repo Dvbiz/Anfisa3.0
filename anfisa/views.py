@@ -33,7 +33,7 @@ def new_friend(request):
         name = request.POST['name']
         city = request.POST['city']
         answer = anfisa.new_friend(name, city)
-        html = f'<p>{answer}</p><p>Теперь ты можешь <a class = "question__link" href="/">задавать вопросы!</a></p>'
+        html = f'<p class ="content__answer">{answer} <a class="question__link" href="/">Задать вопрос?</a></p>'
     context = {
         'response': html, 
         'where': request.path

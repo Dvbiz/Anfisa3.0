@@ -1,18 +1,38 @@
 <!DOCTYPE html>
 <html lang="ru">
+{% load static %}
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <meta name="author" content="Denis Vasiliev" />
+  <link rel="stylesheet" href="{% static "styles/new_friend.css" %}">
+  <link rel="stylesheet" href="{% static "styles/vendor/normalize.css" %}">
+  <!-- <link rel="stylesheet" href="../static/styles/new_friend.css"> -->
+  <!-- <link rel="stylesheet" href='../static/styles/vendor/normalize.css'> -->
   <title>Анфиса 3.0</title>
 </head>
-<body>
-  <form action="{{ where }}" method="post">
-    <input class='askMe__input' type="text" name="name" placeholder="Имя">
-    <input class='askMe__input' type="text" name="city" placeholder="Название города">
-    <input class='askMe__button' type="submit" value="Сохранить"><br><br>
-  </form>
-  {{ response | safe }}
+
+<body class='body'>
+  <header class='header'>
+    <div class="header__title">
+      <h1 class='header__title_text'>Здравствуйте! Я - Анфиса!
+        <span class='text__span'>ver 3.0</span></h1>
+      <hr>
+    </div>
+  </header>
+  <main class="main">
+    <section class="content">
+      <form action="{{ where }}" method="post" class="forms">
+        <input class='content__input' type="text" name="name" placeholder="Имя">
+        <input class='content__input' type="text" name="city" placeholder="Название города">
+        <input class='content__button' type="submit" value="Сохранить"><br><br>
+      </form>
+      {{ response | safe }}
+    </section>
+
+  </main>
+
 </body>
+
 </html>
